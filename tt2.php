@@ -1,49 +1,45 @@
 <head>   
 <meta charset="UTF-8">                                                            
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="main2.js"></script>
 
 <link rel="stylesheet" href="bootstrap-3.0.0/dist/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="bootstrap-3.0.0/dist/css/bootstrap.min.css">
 <script src="bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
-</head>
+
 
 <script type="text/javascript">
 
-var $typeForF;
+function getval(sel) {
 
-function ruru(){
-  getval1(2);
+document.getElementById("nedel").value = sel.value;
 
+	$.ajax({
+	   type: "POST",
+	   url: "seltt2.php",
+dataType: "json",	  
+ data: "nedel="+sel.value+"&day=1",
+		success: function(msg){
+			$("#d1").html(msg[0].daynedel);
+                      console.log(msg);
+                      var $cval=msg;
+
+		}
+	 });
+
+$("#d2").html($cval[0].daynedel);
 }
-
-
-  $(document).ready(function(){
-  
-     $("#yoga1").click(function(){ 
-     
-      
-      getval_tag("Йога");
-    
-     });
-     
-       $("#pilates").click(function(){ 
-      getval_tag("Пилатес");
-     }); 
-     
-       $("#allist").click(function(){ 
-      getval1(2);
-     });   
-       
-     
-        
- });
-
 </script>
+</head>
+
+
+
+
+
 
 
 <br>
-<body onload="ruru();">
+<body>
 
 
 
@@ -97,13 +93,13 @@ function ruru(){
 	</tr>
 
 	<tr style="background-color:#f2f2f2; font-size:12;">
-		<td><div id="pn" style="float:top;" > </div></td>
-		<td><div id="vt" style="float:top;"> </div></td>
-		<td style="float:top;"><div id="sr" > </div></td>
-		<td><div id="ch" style="float:top;" > </div></td>
-		<td><div id="pt" > </div></td>
-		<td><div id="sb" > </div> </td>
-		<td><div id="vs" > </div></td>
+		<td><div id="d1" style="float:top;" > </div></td>
+		<td><div id="d2" style="float:top;"> </div></td>
+		<td <div id="d3" > </div></td>
+		<td><div id="d4" style="float:top;" > </div></td>
+		<td><div id="d5" > </div></td>
+		<td><div id="d6" > </div> </td>
+		<td><div id="d7" > </div></td>
 	</tr>
 
 
