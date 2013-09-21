@@ -1,0 +1,47 @@
+*                           { margin: 0; padding: 0; }
+html                        { overflow-y: scroll; }
+body                        { font: 12px Georgia; }
+
+#page-wrap                  { width: 690px; margin: 20px auto; }
+
+h1                          { font: 30px Georgia; margin: 0 0 10px 0;  }
+
+.discounted-item            { width: 100%; margin: 0 0 10px 0; position: relative; cursor: pointer;
+                              height: 79px; }
+
+.discount-bar               { padding: 10px 0 10px 150px; font: italic 18px Georgia, Serif; }
+.discount-bar strike        { color: #999; padding: 0 5px; }
+.discount-bar span          { font: bold 18px Helvetica, Sans-Serif; }
+
+.reasonbar                  { padding: 4px 0 4px 150px; overflow: hidden;
+                              width: 540px; color: white; }
+                 
+.prod-title                 { width: 49%; float: left; font: bold 17px Helvetica, Sans-Serif; }
+.reason                     { width: 49%; float: right; text-align: right; text-transform: uppercase; 
+                              letter-spacing: 2px; padding: 0 5px 0 0; }
+                              
+.discounted-item img        { position: absolute; top: 0; left: 0; }
+
+.reduced                    { border: 2px solid #A34427; }
+.reduced .reasonbar         { background: #A34427; }
+.reduced .discount-bar      { color: #A34427; background: white; }
+
+.freeshipping               { border: 2px solid #8B3C2A; }
+.freeshipping .reasonbar    { background: #8B3C2A; }
+.freeshipping .discount-bar { color: #8B3C2A; background: white; }
+
+.limited                    { border: 2px solid #D18D4D; }
+.limited .reasonbar         { background: #D18D4D; }
+.limited .discount-bar      { color: #D18D4D; background: white; }
+
+.discontinued               { border: 2px solid #80401D; }
+.discontinued .reasonbar    { background: #80401D; }
+.discontinued .discount-bar { color: #80401D; background: white; }
+
+.webonly                    { border: 2px solid #B37141; }
+.webonly .reasonbar         { background: #B37141; }
+.webonly .discount-bar      { color: #B37141; background: white; }
+
+.buynow                     { position: absolute; bottom: -13px; left: 126px; }
+
+.current                    { font-weight: bold; font-size: 15px; }
